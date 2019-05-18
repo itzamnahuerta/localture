@@ -1,0 +1,15 @@
+@import 'Colors';
+a {
+    display: block;
+    margin-left: 13em;
+
+}
+.sign-up-link {
+    text-decoration: none;
+    color: $blue;
+    font-size: .7em;
+    font-weight: 700;
+}
+.sign-up-link:hover {
+    color: $bluegreen;
+}

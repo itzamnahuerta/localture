@@ -4,10 +4,6 @@ import LandingPage from './components/LandingPage/LandingPage';
 import { login } from './services/authApi';
 import { addUser } from './services/usersApi';
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~
-// import LoginForm from './components/LoginForm/LoginForm.jsx';
-
-
 class App extends Component {
   constructor(){
     super();
