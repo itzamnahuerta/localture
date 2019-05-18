@@ -20,10 +20,10 @@ export default class LandingPageForm extends Component {
     const {username, password} = this.props;
 
     return (
-      <div className="login-form">
-        <h3> Sign In </h3>
+      <div className="login-form form-layout">
         <form 
         onSubmit={this.handleSubmitForm} > 
+        <label className="form-title"> Log in </label>
         <input
           className="login-input" 
           type="text"
@@ -32,6 +32,7 @@ export default class LandingPageForm extends Component {
           placeholder="Username"
           onChange={this.props.handleLoginFormChange}
         />
+        <label> Email </label>
         <input 
           className="login-input"
           type="text"
@@ -40,7 +41,7 @@ export default class LandingPageForm extends Component {
           placeholder="Password"
           onChange={this.props.handleLoginFormChange}
         />
-        <button type="submit" className="sign-in-btn"> Login  </button>
+        <button type="submit" className="log-in-btn"> Login  </button>
         </form>
 
       </div>

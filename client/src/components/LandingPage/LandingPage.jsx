@@ -15,7 +15,7 @@ export default class LandingPage extends Component {
           username={this.props.username}
           password={this.props.password}
         />
-        {/* <SignupForm />  */}
+        <SignupForm /> 
       </div>
     )
   }

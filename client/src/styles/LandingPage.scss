@@ -1,17 +1,49 @@
-.login-form {
-    border: 2px solid red;
+
+.form-layout {
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    label{
+        display:block;
+        margin-left: 1em;
+        margin-bottom: 0;
+    }
+    .form-title{
+        margin-left: 0.8em;
+        font-size:1.4em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
     input {
         display:block;
-        margin: 1em;
+        margin: .6em;
         padding: .5em;
-    }
-    input[type=text], select {
         border: 1px solid black;
-        color: gray;
+        border-radius: .4em;
+        width: 18em;
     }
-    
+    input:focus { 
+        outline: none !important;
+        border-color: #719ECE;
+        box-shadow: 0 0 10px #719ECE;
+    }
+    button {
+        border: 1px solid black;
+        background-color: white;
+        border-radius: .4em;
+        margin-left: .5em;
+        margin-top: 1em;
+    }
+    .log-in-btn {
+        width: 6em;
+        height: 3em;
 
+    }
+    .sign-up-btn {
+        width: 9em;
+        height: 3em;
+
+    }
 }
