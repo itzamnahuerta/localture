@@ -21,9 +21,9 @@ export default class LandingPageForm extends Component {
 
     return (
       <div className="login-form form-layout">
-        <h3> Sign In </h3>
         <form 
         onSubmit={this.handleSubmitForm} > 
+        <label className="form-title"> Log in </label>
         <input
           className="login-input" 
           type="text"
