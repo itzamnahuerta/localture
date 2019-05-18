@@ -14,15 +14,6 @@ export default class LandingPageForm extends Component {
             password: ''
         }
     }
-
-    handleFormChange = (e) => {
-        const fieldName = e.target.name;
-        const value = e.target.value;
-        this.setState({
-            [fieldName] : value,
-            error: false
-        })
-    }
     
 
   render() {
@@ -31,7 +22,7 @@ export default class LandingPageForm extends Component {
     return (
       <div className="login-form">
         <h3> Sign In </h3>
-        <form onChange={this.handleFormChange} > 
+        <form onChange={this.props.handleLoginFormChange} > 
         <input
           className="login-input" 
           type="text"
