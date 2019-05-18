@@ -5,8 +5,8 @@ const seedDb = async () => {
   try {
 
     const testUser = await AuthUser.create({
-      username: 'test2',
-      password: 'test2',
+      username: 'test',
+      password: 'test',
       email: 'test@fakemail.com',
       first_name: 'test',
       last_name: 'test',
@@ -16,8 +16,8 @@ const seedDb = async () => {
       username: 'test2',
       password: 'test2',
       email: 'test@fakemail.com',
-      first_name: 'test',
-      last_name: 'test',
+      first_name: 'test2',
+      last_name: 'test2',
       home_area: 'London, UK'
     })
 
