@@ -18,6 +18,18 @@ const AuthUser = localtureDb.define('authuser', {
     home_area:{
         type: Sequelize.STRING,
         allowNull: false
+    },
+    email: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    first_name: {
+      type: Sequelize.STRING,
+      allowNull: false
+    },
+    last_name: {
+      type: Sequelize.STRING,
+      allowNull: false
     }
   })
 
