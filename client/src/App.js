@@ -16,9 +16,11 @@ class App extends Component {
       username: '',
       password: ''
     }
+    this.handleLogin = this.handleLogin.bind(this);
   }
 
   handleLoginFormChange = (e) => {
+
     const fieldName = e.target.name;
     const value = e.target.value;
     this.setState({
@@ -30,6 +32,7 @@ class App extends Component {
   async handleLogin() {
     try {
         const { username, password} = this.state;
+        console.log(username, password)
         const response = await login({username, password});
         console.log(response);
         this.setState({
@@ -50,6 +53,8 @@ class App extends Component {
           authenticated={this.state.authenticated}
           handleLoginFormChange={this.handleLoginFormChange}
           handleLogin={this.handleLogin}
+          username={this.state.username}
+          password={this.state.password}
         />
       </div>
     );

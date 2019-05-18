@@ -8,27 +8,29 @@ export default class LandingPageForm extends Component {
     constructor() {
         super();
         this.state = {
-            error:false,
-            isAuthenticated: false,
-            username: '',
-            password: ''
+
         }
     }
-    
+    handleSubmitForm = (e) => {
+      e.preventDefault();
+      this.props.handleLogin();
+    }
 
   render() {
-    const {username, password} = this.state;
+    const {username, password} = this.props;
 
     return (
       <div className="login-form">
         <h3> Sign In </h3>
-        <form onChange={this.props.handleLoginFormChange} > 
+        <form 
+        onSubmit={this.handleSubmitForm} > 
         <input
           className="login-input" 
           type="text"
           name="username"
           value={username}
           placeholder="Username"
+          onChange={this.props.handleLoginFormChange}
         />
         <input 
           className="login-input"
@@ -36,6 +38,7 @@ export default class LandingPageForm extends Component {
           name="password"
           value={password}
           placeholder="Password"
+          onChange={this.props.handleLoginFormChange}
         />
         <button type="submit" className="sign-in-btn"> Login  </button>
         </form>

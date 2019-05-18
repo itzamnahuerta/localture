@@ -11,7 +11,10 @@ export default class LandingPage extends Component {
         <LoginForm
           authenticated={this.props.authenticated}
           handleLoginFormChange={this.props.handleLoginFormChange}
-          handleLogin={this.props.handleLogin}/>
+          handleLogin={this.props.handleLogin}
+          username={this.props.username}
+          password={this.props.password}
+        />
         {/* <SignupForm />  */}
       </div>
     )
