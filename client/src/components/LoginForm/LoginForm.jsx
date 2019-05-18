@@ -32,7 +32,7 @@ export default class LandingPageForm extends Component {
           placeholder="Username"
           onChange={this.props.handleLoginFormChange}
         />
-        <label> Email </label>
+        <label> Password </label>
         <input 
           className="login-input"
           type="text"
