@@ -5,15 +5,22 @@ const seedDb = async () => {
   try {
 
     const testUser = await AuthUser.create({
-      username:'test',
+      username: 'test',
       password: 'test',
-      home_area: 'New York, NY'
+      email: 'test@fakemail.com',
+      first_name: 'test',
+      last_name: 'test',
+      home_area: 'New York, USA'
     });
     const testUser2 = await AuthUser.create({
       username: 'test2',
       password: 'test2',
+      email: 'test@fakemail.com',
+      first_name: 'test2',
+      last_name: 'test2',
       home_area: 'London, UK'
     })
+
 
     const london = await City.create({
       name: "London, UK",
