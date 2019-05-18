@@ -1,7 +1,7 @@
 const express = require('express');
-const loggedInRoutes = express.Router();
+const loggedInRoute = express.Router();
 
-loggedInRoutes.get('/protected', (req,res, next) => {
+loggedInRoute.get('/protected', (req,res, next) => {
     try{
         res.json({
             user: req.user, 
@@ -15,4 +15,4 @@ loggedInRoutes.get('/protected', (req,res, next) => {
 
 
 
-module.exports =  loggedInRoutes;
+module.exports =  { loggedInRoute };

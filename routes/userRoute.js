@@ -1,9 +1,9 @@
 const express = require('express');
-const userRouter = express.Router();
+const userRoute = express.Router();
 
 const { AuthUser } = require('../models');
 
-userRouter.get('/', async (req, res) => {
+userRoute.get('/', async (req, res) => {
   try {
     const allUsers = await AuthUser.findAll();
     res.send(allUsers);
@@ -14,7 +14,7 @@ userRouter.get('/', async (req, res) => {
 
 
 // post new user
-userRouter.post('/', async (req, res) => {
+userRoute.post('/', async (req, res) => {
   try {
     const postedUser = await AuthUser.create(req.body);
     res.send(postedUser);
@@ -24,7 +24,7 @@ userRouter.post('/', async (req, res) => {
 });
 
 //find one user
-userRouter.get('/:id', async (req, res) => {
+userRoute.get('/:id', async (req, res) => {
   try {
     const leUser = await AuthUser.findByPk(req.params.id);
     res.send(leUser);
@@ -34,7 +34,7 @@ userRouter.get('/:id', async (req, res) => {
 });
 
 //update existing users
-userRouter.put('/:id', async (req, res) => {
+userRoute.put('/:id', async (req, res) => {
   try {
     const id = req.params.id;
     const grabbedUser = await AuthUser.findByPk(id);
@@ -51,7 +51,7 @@ userRouter.put('/:id', async (req, res) => {
   
 
 // delete particular user
-userRouter.delete('/:id', async (req, res) => {
+userRoute.delete('/:id', async (req, res) => {
   try {
     const deleteIt = await AuthUser.findByPk(req.params.id);
     await deleteIt.destroy();
@@ -61,4 +61,4 @@ userRouter.delete('/:id', async (req, res) => {
   }
 });
 
-module.exports = { userRouter };
+module.exports = { userRoute };
