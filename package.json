@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "db:init": "dropdb --if-exists localtureDb && createdb localtureDb",
+    "db:reset": "node resetDb.js",
+    "db:seed": "node seedDb.js",
+    "db:create": "createdb pawDb"
   },
   "repository": {
     "type": "git",
@@ -26,6 +31,7 @@
     "express": "^4.17.0",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.9.1",
+    "nodemon": "^1.19.0",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",

@@ -1,9 +1,9 @@
 const express = require('express');
-const authRouter = express.Router();
+const authRoute = express.Router();
 const { passport, jwtSign } = require('../auth/auth')
 
 
-authRouter.post('/login', async (req,res, next) => {
+authRoute.post('/login', async (req,res, next) => {
     passport.authenticate('login', async(err, user, info) => {
     try {
       console.log('error', err);
@@ -25,7 +25,7 @@ authRouter.post('/login', async (req,res, next) => {
   })(req, res, next)
 });
 
-authRouter.post('/signup', async (req,res,next) => {
+authRoute.post('/signup', async (req,res,next) => {
     passport.authenticate('signup', async (err, user, info) => {
         try{
             if (!user || err ) {
@@ -42,6 +42,6 @@ authRouter.post('/signup', async (req,res,next) => {
     })(req, res, next)
 })
 
-module.exports = authRouter;
+module.exports = { authRoute };
 
 
