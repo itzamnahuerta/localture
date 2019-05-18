@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-// import { Redirect } from 'react-router-dom';
-// import SignUpForm from '../SignupForm/SignupForm'
-// import { LandingPage } from "../LandingPage/LandingPage";
+import { Redirect } from 'react-router-dom';
+import SignUpForm from '../SignupForm/SignupForm'
 
 
 export default class LandingPageForm extends Component {
     constructor() {
         super();
         this.state = {
-
+          isSignup: false
         }
     }
     handleSubmitForm = (e) => {
       e.preventDefault();
       this.props.handleLogin();
+    }
+    handleSignupForm = () => {
+      this.setState({isSignup:!this.state.isSignup})
     }
 
   render() {
@@ -41,6 +43,9 @@ export default class LandingPageForm extends Component {
           placeholder="Password"
           onChange={this.props.handleLoginFormChange}
         />
+
+        <a className="sign-up-link"> Sign up for Localture </a>
+
         <button type="submit" className="log-in-btn"> Login  </button>
         </form>
 
@@ -48,3 +53,5 @@ export default class LandingPageForm extends Component {
     )
   }
 }
+
+
