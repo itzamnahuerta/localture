@@ -1,0 +1,32 @@
+
+@import 'Colors';
+@import 'Landingpage';
+@import 'Map';
+@import 'UserProfile';
+
+
+.App {    
+  .page-title{
+      margin-left: 60%;
+      margin-bottom: 5em;
+      .font-one { 
+          font-family: 'Open Sans Condensed', sans-serif;
+          line-height: normal;
+          font-weight: 10;
+          font-size: 70pt;
+      }
+      .font-two {
+          font-family: 'Noto Sans', sans-serif;
+          font-size: 70pt;
+      }
+      .star-character {
+          font-size: 40pt;
+          position: absolute;
+          top: 2%;
+      }
+  }
+
+  button:focus, button:active {
+      outline:none;
+  }
+}
