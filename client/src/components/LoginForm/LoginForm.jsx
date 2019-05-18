@@ -8,37 +8,29 @@ export default class LandingPageForm extends Component {
     constructor() {
         super();
         this.state = {
-            error:false,
-            isAuthenticated: false,
-            username: '',
-            password: ''
+
         }
     }
-
-    handleFormChange = (e) => {
-        const fieldName = e.target.name;
-        const value = e.target.value;
-        this.setState({
-            [fieldName] : value,
-            error: false
-        })
+    handleSubmitForm = (e) => {
+      e.preventDefault();
+      this.props.handleLogin();
     }
-    
 
   render() {
-    const {username, password} = this.state;
+    const {username, password} = this.props;
 
     return (
-      <div className="login-form form-layout" >
-    
-        <form onChange={this.handleFormChange} > 
-        <label className="form-title"> Login </label>
-        <label> Username </label>
+      <div className="login-form form-layout">
+        <h3> Sign In </h3>
+        <form 
+        onSubmit={this.handleSubmitForm} > 
         <input
           className="login-input" 
           type="text"
           name="username"
           value={username}
+          placeholder="Username"
+          onChange={this.props.handleLoginFormChange}
         />
         <label> Email </label>
         <input 
@@ -46,6 +38,8 @@ export default class LandingPageForm extends Component {
           type="text"
           name="password"
           value={password}
+          placeholder="Password"
+          onChange={this.props.handleLoginFormChange}
         />
         <button type="submit" className="log-in-btn"> Login  </button>
         </form>

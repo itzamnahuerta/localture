@@ -62,7 +62,7 @@ passport.use('login', new LocalStrategy({
       console.log('username', username);
       // find user by their username
       const user = await AuthUser.findOne({ where: { username: username }})
-      console.log(user.username);
+      console.log(user.username, "returned user");
   
       console.log(`*** user: ${user} ***`);
 
