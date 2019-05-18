@@ -3,52 +3,47 @@ import React, { Component } from 'react'
 export default class SignupForm extends Component {
   render() {
     return (
-      <div className="sign-up-form">
-        <form>
+      <div className="sign-up-form form-layout">
+        <form >
+            <label className="form-title"> Sign Up </label>
+
             <label> Username </label>  
             <input
                 type="text"
-                name="name"
-                placeholder="Username"
+                name="username"
             />
             <label> Email </label>    
             <input
                 type="text"
-                name="name"
-                placeholder="Email"
+                name="email"
             /> 
             <label> Password </label>
             <input
                 type="text"
-                name="name"
-                placeholder="Password"
+                name="password"
             />
             <label> First Name </label>
             <input
                 type="text"
-                name="name"
-                placeholder="First Name"
+                name="first-name"
             />
             <label> Last Name </label>
             <input
                 type="text"
-                name="name"
-                placeholder="Last Name"
+                name="last-name"
             />
             <label> City </label>
             <input
                 type="text"
-                name="name"
-                placeholder="City"
+                name="city"
+
             />
             <label> Country </label>
             <input
                 type="text"
-                name="name"
-                placeholder="Country"
+                name="country"
             />
-            
-            
+            <button type="submit" className="sign-up-btn"> Get started </button>
 
         </form>
       </div>

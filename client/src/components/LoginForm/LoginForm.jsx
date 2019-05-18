@@ -29,24 +29,25 @@ export default class LandingPageForm extends Component {
     const {username, password} = this.state;
 
     return (
-      <div className="login-form">
-        <h3> Sign In </h3>
+      <div className="login-form form-layout" >
+    
         <form onChange={this.handleFormChange} > 
+        <label className="form-title"> Login </label>
+        <label> Username </label>
         <input
           className="login-input" 
           type="text"
           name="username"
           value={username}
-          placeholder="Username"
         />
+        <label> Email </label>
         <input 
           className="login-input"
           type="text"
           name="password"
           value={password}
-          placeholder="Password"
         />
-        <button type="submit" className="sign-in-btn"> Login  </button>
+        <button type="submit" className="log-in-btn"> Login  </button>
         </form>
 
       </div>
