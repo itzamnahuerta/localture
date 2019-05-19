@@ -9,7 +9,7 @@ export default class Dashboard extends Component {
       <div>
 
         <Switch> 
-            <Route exact path="/userprofile"component={UserProfile}/>
+            <Route exact path="/userprofile" component={UserProfile}/>
             <Route exact path="/map"component={Map}/>
         </Switch> 
       </div>

@@ -44,6 +44,8 @@ export default class SignupForm extends Component {
                 name="country"
             />
             <button type="submit" className="sign-up-btn"> Get started </button>
+            <a className="sign-up-link" onClick={this.props.handleFormChange}> Login Instead </a>
+
 
         </form>
       </div>
