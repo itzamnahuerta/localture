@@ -4,6 +4,7 @@ import LandingPage from './components/LandingPage/LandingPage';
 import { login } from './services/authApi';
 import { addUser } from './services/usersApi';
 import Dashboard from './components/Dashboard/Dashboard';
+import Header from './components/Header/Header'
 
 class App extends Component {
   constructor(){
@@ -74,8 +75,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1> localture* </h1>
-          {/* <Header /> */}
+        <h4> localture* </h4>
+          <Header />
            <LandingPage 
             authenticated={this.state.authenticated}
             handleLoginFormChange={this.handleLoginFormChange}

@@ -46,7 +46,6 @@ export default class LandingPage extends Component {
 
     return (
       <div>
-        <h1> landing page </h1>
         {switchForm}
       </div>
     )
