@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
-import SignUpForm from '../SignupForm/SignupForm'
+// import { Redirect } from 'react-router-dom';
+// import SignUpForm from '../SignupForm/SignupForm'
 
 
 export default class LandingPageForm extends Component {
@@ -43,7 +43,7 @@ export default class LandingPageForm extends Component {
           placeholder="Password"
           onChange={this.props.handleLoginFormChange}
         />
-
+        {/* this is an 'a' tag. should be a <LINK></LINK> */}
         <a className="sign-up-link"> Sign up for Localture </a>
 
         <button type="submit" className="log-in-btn"> Login  </button>
