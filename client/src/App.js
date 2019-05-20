@@ -3,6 +3,7 @@ import './styles/App.scss';
 import LandingPage from './components/LandingPage/LandingPage';
 import { login } from './services/authApi';
 import { addUser } from './services/usersApi';
+import Dashboard from './components/Dashboard/Dashboard';
 
 class App extends Component {
   constructor(){
@@ -74,13 +75,16 @@ class App extends Component {
     return (
       <div className="App">
         <h1> localture* </h1>
-        <LandingPage
-          authenticated={this.state.authenticated}
-          handleLoginFormChange={this.handleLoginFormChange}
-          handleLogin={this.handleLogin}
-          username={this.state.username}
-          password={this.state.password}
-        />
+          {/* <Header /> */}
+           <LandingPage 
+            authenticated={this.state.authenticated}
+            handleLoginFormChange={this.handleLoginFormChange}
+            handleLogin={this.handleLogin}
+            handleSignUp={this.handleSignUp}
+            username={this.state.username}
+            password={this.state.password}
+          />
+           {/* <Footer /> */}
       </div>
     );
   }

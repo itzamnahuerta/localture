@@ -14,9 +14,7 @@ export default class LandingPageForm extends Component {
       e.preventDefault();
       this.props.handleLogin();
     }
-    handleSignupForm = () => {
-      this.setState({isSignup:!this.state.isSignup})
-    }
+
 
   render() {
     const {username, password} = this.props;
@@ -43,8 +41,9 @@ export default class LandingPageForm extends Component {
           placeholder="Password"
           onChange={this.props.handleLoginFormChange}
         />
-        {/* this is an 'a' tag. should be a <LINK></LINK> */}
-        <a className="sign-up-link"> Sign up for Localture </a>
+
+
+        <div className="sign-up-link" onClick={this.props.formToggle}> Sign up for Localture </div>
 
         <button type="submit" className="log-in-btn"> Login  </button>
         </form>
