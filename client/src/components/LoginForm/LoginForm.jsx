@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
-import SignUpForm from '../SignupForm/SignupForm'
+// import { Redirect } from 'react-router-dom';
+// import SignUpForm from '../SignupForm/SignupForm'
 
 
 export default class LandingPageForm extends Component {
@@ -42,7 +42,8 @@ export default class LandingPageForm extends Component {
           onChange={this.props.handleLoginFormChange}
         />
 
-        <a className="sign-up-link" onClick={this.props.handleFormChange}> Sign up for Localture </a>
+
+        <div className="sign-up-link" onClick={this.props.formToggle}> Sign up for Localture </div>
 
         <button type="submit" className="log-in-btn"> Login  </button>
         </form>

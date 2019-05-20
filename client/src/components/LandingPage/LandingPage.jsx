@@ -12,11 +12,10 @@ export default class LandingPage extends Component {
     }
   }
 
-  handleFormChange = () => {
-    this.setState({
-      formBtn: !this.state.formBtn
-    });
+  formToggle = () => {
+    this.setState({formBtn: !this.state.formBtn})
   }
+
 
   showLoginForm = () => {
     return (
@@ -26,7 +25,7 @@ export default class LandingPage extends Component {
         handleLogin={this.props.handleLogin}
         username={this.props.username}
         password={this.props.password}
-        handleFormChange={this.handleFormChange}
+        formToggle={this.formToggle}
       />
     );
   }
@@ -34,7 +33,10 @@ export default class LandingPage extends Component {
   showRegisterForm = () => {
     return (
 
-      <SignupForm handleFormChange={this.handleFormChange}/>
+      <SignupForm 
+        formToggle={this.formToggle}
+        handleLoginFormChange={this.props.handleLoginFormChange}
+      />
     );
   }
 
