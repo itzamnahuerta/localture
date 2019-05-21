@@ -16,10 +16,13 @@ export default class Dashboard extends Component {
       country: '',
       email: '',
       first_name: '',
-      last_name: ''
+      last_name: '',
     }
   }
+
+
   render() {
+
     return (
       <div>
         <Switch> 

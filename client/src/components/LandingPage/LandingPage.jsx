@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Redirect} from 'react-router-dom'
 import LoginForm from '../LoginForm/LoginForm'
 import SignupForm from '../SignupForm/SignupForm';
-import Dashboard from '../Dashboard/Dashboard';
+import Main from '../Main/Main';
 import UserProfile from '../UserProfile/UserProfile'
 
 export default class LandingPage extends Component {
@@ -55,7 +55,6 @@ export default class LandingPage extends Component {
     else if(!this.props.authenticated){
       return (
         <div>
-          <h1> landing page </h1>
           {switchForm}
         </div>
       )
