@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-
+import {Redirect} from 'react-router-dom'
 import LoginForm from '../LoginForm/LoginForm'
 import SignupForm from '../SignupForm/SignupForm';
+import Dashboard from '../Dashboard/Dashboard';
+import UserProfile from '../UserProfile/UserProfile'
 
 export default class LandingPage extends Component {
   constructor() {
-    super()
+    super();
 
     this.state = {
       formBtn: false
@@ -34,6 +36,7 @@ export default class LandingPage extends Component {
     return (
 
       <SignupForm 
+        handleSignUp={this.props.handleSignUp}
         formToggle={this.formToggle}
         handleLoginFormChange={this.props.handleLoginFormChange}
       />
@@ -43,12 +46,20 @@ export default class LandingPage extends Component {
 
   render() {
     const switchForm = this.state.formBtn ? this.showLoginForm() : this.showRegisterForm()
-
-    return (
-      <div>
-        <h1> landing page </h1>
-        {switchForm}
-      </div>
-    )
+    if(this.props.authenticated){
+      return(
+        <Redirect to='/user' />
+        //Try redirect here?????
+      )
+    }
+    else if(!this.props.authenticated){
+      return (
+        <div>
+          <h1> landing page </h1>
+          {switchForm}
+        </div>
+      )
+    }
   }
 }
+

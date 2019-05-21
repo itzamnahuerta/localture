@@ -4,7 +4,7 @@ export default class SignupForm extends Component {
   render() {
     return (
       <div className="sign-up-form form-layout">
-        <form >
+        <form onSubmit={this.props.handleSignUp}>
             <label className="form-title"> Sign Up </label>
 
             <label> Username </label>  
@@ -28,13 +28,13 @@ export default class SignupForm extends Component {
             <label> First Name </label>
             <input
                 type="text"
-                name="first-name"
+                name="first_name"
                 onChange={this.props.handleLoginFormChange}
             />
             <label> Last Name </label>
             <input
                 type="text"
-                name="last-name"
+                name="last_name"
                 onChange={this.props.handleLoginFormChange}
             />
             <label> City </label>
@@ -50,7 +50,9 @@ export default class SignupForm extends Component {
                 name="country"
                 onChange={this.props.handleLoginFormChange}
             />
-            <button type="submit" className="sign-up-btn"> Get started </button>
+            <button 
+              type="submit" 
+              className="sign-up-btn"> Get started </button>
             <div className="sign-up-link" onClick={this.props.formToggle}> Login Instead </div>
 
 

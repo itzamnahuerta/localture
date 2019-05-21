@@ -1,11 +1,10 @@
 import axios from 'axios';
 
-const Base_URL = 'http://localhost:4567/'
+const Base_URL = 'http://localhost:4567'
 
 const api = axios.create({
     baseURL: Base_URL 
 })
-
 
 export const getAllUsers = async () => {
     try{
@@ -20,7 +19,8 @@ export const getAllUsers = async () => {
 
 export const addUser = async (data) => {
     try{
-        const resp = await api.post('/', data);
+        console.log('in the add user')
+        const resp = await api.post('/users', data);
         console.log(resp.data);
         return resp      
     }
