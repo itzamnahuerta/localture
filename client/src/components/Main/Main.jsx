@@ -17,15 +17,12 @@ export default class Dashboard extends Component {
       email: '',
       first_name: '',
       last_name: '',
-      is_hamburgerMenu_clicked: false
     }
   }
 
-  handleMenuOpen = () => {
-    this.setState({is_hamburgerMenu_clicked: !this.state.is_hamburgerMenu_clicked})
-  }
 
   render() {
+
     return (
       <div>
         <Switch> 

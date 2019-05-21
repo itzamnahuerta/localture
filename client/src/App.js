@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import './styles/App.scss';
 import { login } from './services/authApi';
 import { addUser } from './services/usersApi';
-import Dashboard from './components/Dashboard/Dashboard';
+import Main from './components/Main/Main';
 import Header from './components/Header/Header'
-
+import HamburgerMenu from './components/HamburgerMenu/HamburgerMenu'
 
 class App extends Component {
   constructor(){
@@ -20,7 +20,8 @@ class App extends Component {
       email: '',
       first_name: '',
       last_name: '',
-      isAuthenticated: false
+      isAuthenticated: false,
+      is_hamburger_menu_clicked: false
 
     }
     this.handleLogin = this.handleLogin.bind(this);
@@ -73,13 +74,29 @@ class App extends Component {
     }
 }
 
-
+  handleMenuOpen = () => {
+    this.setState({is_hamburger_menu_clicked:!this.state.is_hamburger_menu_clicked})
+  }
+  
   render() {
+    console.log('is menu clicked ====>',this.state.is_hamburger_menu_clicked)
+    const showHamburgerIcon = this.is_hamburger_menu_clicked === true ? 'icon-menu-invisible' : 'hamburger-icon'
+
     return (
       <div className="App">
-        <h1> localture* </h1>
         <Header />
-        <Dashboard 
+
+        <div className={`${showHamburgerIcon}`} onClick={this.handleMenuOpen} > 
+          <div className="line line1"> </div>
+          <div className="line line2"> </div>
+          <div className="line line3"> </div>
+        </div>
+
+        <HamburgerMenu 
+          handleMenuOpen={this.state.handleMenuOpen}
+          is_hamburger_menu_clicked={this.state.is_hamburger_menu_clicked}
+        />
+        <Main
           isAuthenticated={this.state.isAuthenticated}
           handleLoginFormChange={this.handleLoginFormChange}
           handleLogin={this.handleLogin}
