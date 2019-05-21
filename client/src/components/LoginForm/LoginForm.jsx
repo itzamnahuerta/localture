@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import { Redirect } from 'react-router-dom';
-// import SignUpForm from '../SignupForm/SignupForm'
+import { Link, Redirect } from 'react-router-dom';
+
 
 
 export default class LandingPageForm extends Component {
@@ -17,12 +17,15 @@ export default class LandingPageForm extends Component {
 
 
   render() {
+    if(this.props.authenticated){
+      return <Redirect to='/user' />
+      
+    }
     const {username, password} = this.props;
 
     return (
       <div className="login-form form-layout">
-        <form 
-        onSubmit={this.handleSubmitForm} > 
+        <form> 
         <label className="form-title"> Log in </label>
         <input
           className="login-input" 
@@ -45,7 +48,15 @@ export default class LandingPageForm extends Component {
 
         <div className="sign-up-link" onClick={this.props.formToggle}> Sign up for Localture </div>
 
-        <button type="submit" className="log-in-btn"> Login  </button>
+        {/* <Link to='/user'> */}
+          <button 
+            type="submit" 
+            className="log-in-btn"
+            onClick={this.handleSubmitForm}> 
+             Login  
+          </button>
+        {/* </Link> */}
+
         </form>
 
       </div>

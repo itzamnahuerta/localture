@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './styles/App.scss';
-import LandingPage from './components/LandingPage/LandingPage';
 import { login } from './services/authApi';
 import { addUser } from './services/usersApi';
 import Dashboard from './components/Dashboard/Dashboard';
+
+
 
 class App extends Component {
   constructor(){
@@ -18,7 +19,8 @@ class App extends Component {
       country: '',
       email: '',
       first_name: '',
-      last_name: ''
+      last_name: '',
+      isAuthenticated: false
 
     }
     this.handleLogin = this.handleLogin.bind(this);
@@ -39,8 +41,9 @@ class App extends Component {
         console.log(username, password)
         const response = await login({username, password});
         console.log(response);
+        console.log('ahhhhhh')
         this.setState({
-            authenticated: true
+          isAuthenticated: true
         })
     }
     catch (e) {
@@ -50,7 +53,7 @@ class App extends Component {
 
   handleSignUp = async(e) => {
     e.preventDefault();
-    if(!this.state.username || !this.state.password || !this.state.home_area || !this.state.first_name || !this.state.last_name || !this.state.email){
+    if(!this.state.username || !this.state.password || !this.state.city || !this.state.country || !this.state.first_name || !this.state.last_name || !this.state.email){
         alert('Please fill in all fields')
     }
     else {
@@ -66,7 +69,7 @@ class App extends Component {
         await addUser(newUser);
         console.log('user created')
         this.setState({createdUser: true});
-        this.setState({authenticated: true});
+        this.setState({isAuthenticated: true});
     }
 }
 
@@ -75,16 +78,22 @@ class App extends Component {
     return (
       <div className="App">
         <h1> localture* </h1>
-          {/* <Header /> */}
-           <LandingPage 
-            authenticated={this.state.authenticated}
-            handleLoginFormChange={this.handleLoginFormChange}
-            handleLogin={this.handleLogin}
-            handleSignUp={this.handleSignUp}
-            username={this.state.username}
-            password={this.state.password}
-          />
-           {/* <Footer /> */}
+
+        <Dashboard 
+          isAuthenticated={this.state.isAuthenticated}
+          handleLoginFormChange={this.handleLoginFormChange}
+          handleLogin={this.handleLogin}
+          handleSignUp={this.handleSignUp}
+          username={this.state.username}
+          password={this.state.password}
+          country={this.state.country}
+          city={this.state.city}
+          email={this.state.email}
+          first_name={this.state.first_name}
+          last_name={this.state.last_name}
+          formToggle={this.formToggle}
+        />
+  
       </div>
     );
   }
