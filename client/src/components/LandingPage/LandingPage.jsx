@@ -55,7 +55,6 @@ export default class LandingPage extends Component {
     else if(!this.props.authenticated){
       return (
         <div>
-          <h1> landing page </h1>
           {switchForm}
         </div>
       )

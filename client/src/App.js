@@ -3,7 +3,7 @@ import './styles/App.scss';
 import { login } from './services/authApi';
 import { addUser } from './services/usersApi';
 import Dashboard from './components/Dashboard/Dashboard';
-
+import Header from './components/Header/Header'
 
 
 class App extends Component {
@@ -78,7 +78,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1> localture* </h1>
-
+        <Header />
         <Dashboard 
           isAuthenticated={this.state.isAuthenticated}
           handleLoginFormChange={this.handleLoginFormChange}
