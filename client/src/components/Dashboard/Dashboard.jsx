@@ -31,6 +31,8 @@ export default class Dashboard extends Component {
                 handleSignUp={this.props.handleSignUp}
                 username={this.props.username}
                 password={this.props.password}
+                otherUser={this.props.otherUser}
+                handleOthersView={this.props.handleOthersView}
               />} />
     
               <Route exact path="/travelers_near_you"
@@ -43,11 +45,20 @@ export default class Dashboard extends Component {
               }/>
               <Route path="/user"
                 render={() => <UserProfile 
-                  authenticated={this.props.isAuthenticated}/>
+                  authenticated={this.props.isAuthenticated}
+                  otherUser={this.props.otherUser}
+                  handleOthersView={this.props.handleOthersView}
+                  />
               }/>
               <Route path='/othersprofile'
                 render={() => <OthersProfile 
-                  authenticated={this.props.isAuthenticated}/>
+                  authenticated={this.props.isAuthenticated}
+                  first_name={this.props.first_name}
+                  last_name={this.props.last_name}
+                  home_area={this.props.home_area}
+                  otherUser={this.props.otherUser}
+                  handleOthersView={this.props.handleOthersView}
+                  />
               }/>
       
         </Switch> 

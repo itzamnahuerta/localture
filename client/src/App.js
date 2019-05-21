@@ -20,8 +20,8 @@ class App extends Component {
       email: '',
       first_name: '',
       last_name: '',
-      isAuthenticated: false
-
+      isAuthenticated: false,
+      otherUser: false
     }
     this.handleLogin = this.handleLogin.bind(this);
   }
@@ -33,6 +33,10 @@ class App extends Component {
         [fieldName] : value,
         error: false
     })
+  }
+
+  handleOthersView = () => {
+    this.setState({otherUser: true})
   }
 
   async handleLogin() {
@@ -92,6 +96,8 @@ class App extends Component {
           first_name={this.state.first_name}
           last_name={this.state.last_name}
           formToggle={this.formToggle}
+          otherUser={this.state.otherUser}
+          handleOthersView={this.handleOthersView}
         />
   
       </div>

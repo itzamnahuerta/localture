@@ -5,6 +5,7 @@ import Food from '../../assets/food.png';
 import Music from '../../assets/music.png';
 import Active from '../../assets/active.png';
 import Note from '../../assets/note.png'
+import Add from '../../assets/add.png'
 
 class ProfileInterests extends Component {
     constructor(){
@@ -19,19 +20,51 @@ class ProfileInterests extends Component {
         this.setState({editInterests: true})
     }
 
-    render() {
-        if(this.state.editInterests){
-            return <h1>working</h1>
-        
+    iconSwitch = () => {
+        console.log(this.props.otherUser)
+        if(this.props.otherUser){
+            return <img 
+                    src={Note} 
+                    onClick={this.props.handleEditInterests}
+                    id={this.props.name}/>
         }
-        else if(!this.state.editInterests) {
+        else{
+            return <img src={Add} />
+        }
+    }
+
+    render() {
+        if(this.props.otherUser){
+            return(
+                <div>
+                    {this.props.image}
+                    <img 
+                        src={Note} 
+                        onClick={this.props.handleEditInterests}
+                        id={this.props.name}/>
+                    <div>{this.props.name}</div>
+
+
+{console.log(this.props.otherUser)}
+
+
+                    <ul>
+                        <li>Sub Category</li>
+                        <li>Sub Category</li>
+                        <li>Sub Category</li>
+                        <li>Sub Category</li>
+                    </ul>
+                </div>
+            )
+        }
+        else{
             return (
                 <div>
                     {this.props.image}
                     <img 
-                    src={Note} 
-                    onClick={this.props.handleEditInterests}
-                    id={this.props.name}/>
+                        src={Add} 
+                        onClick={this.props.handleEditInterests}
+                        id={this.props.name}/>
                     <div>{this.props.name}</div>
                     <ul>
                         <li>Sub Category</li>
@@ -40,7 +73,7 @@ class ProfileInterests extends Component {
                         <li>Sub Category</li>
                     </ul>
                 </div>
-            );
+            )
         }
     }
 }
