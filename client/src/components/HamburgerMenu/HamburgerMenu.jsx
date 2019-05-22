@@ -13,7 +13,7 @@ const HamburgerMenu = (props) => {
                 <div className="xMark"> x </div>
             </div>
             <div className="sidebar-title"> LOCALTURE </div>
-            <Link to="/"> Dashboard </Link>
+            <Link to="/dashboard"> Dashboard </Link>
             <Link to="/"> My Profile</Link>
             <Link to="/"> Logout </Link>
         </div> 

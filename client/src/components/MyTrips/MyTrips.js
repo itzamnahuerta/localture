@@ -34,7 +34,7 @@ class MyTrips extends Component {
                         <div>Paris, France</div>
                     </div>
                     <div>
-                        <div>Business Image</div>
+                        <img src={Restaurant} alt='' />
                         <div>Opalto</div>
                         <div>69 rue de Charonne, 75011 Paris, France</div>
                     </div>
@@ -49,7 +49,7 @@ class MyTrips extends Component {
                         <div>Paris, France</div>
                     </div>
                     <div>
-                        <div>Business Image</div>
+                    <img src={Restaurant_2} alt='' />
                         <div>Signature Montmartre</div>
                         <div>12 rue des Trois Freres, 75018 Paris, France</div>
                     </div>
@@ -66,7 +66,7 @@ class MyTrips extends Component {
                         <div>Paris, France</div>
                     </div>
                     <div>
-                        <div>Business Image</div>
+                    <img src={Restaurant_3} alt='' />
                         <div>Petit Boutary</div>
                         <div>16 rue Jacquemont, 75017 Paris, France</div>
                     </div>
@@ -81,7 +81,7 @@ class MyTrips extends Component {
                         <div>Paris, France</div>
                     </div>
                     <div>
-                        <div>Business Image</div>
+                    <img src={Restaurant_4} alt='' />
                         <div>La Min</div>
                         <div>45 rue de Montreuil, 75011 Paris, France</div>
                     </div>
@@ -96,7 +96,7 @@ class MyTrips extends Component {
                         <div>Paris, France</div>
                     </div>
                     <div>
-                        <div>Business Image</div>
+                    <img src={Restaurant_5} alt='' />
                         <div>Petite Fleur</div>
                         <div>5 rue Damremont, 75018 Paris, France</div>
                     </div>
