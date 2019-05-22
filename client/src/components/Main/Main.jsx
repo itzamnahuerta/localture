@@ -46,7 +46,7 @@ export default class Main extends Component {
               }/>
               <Route path="/dashboard"
                 render={() => <Dash 
-                  authenticated={this.props.isAuthenticated}
+                  isauthenticated={this.props.isAuthenticated}
                   otherUser={this.props.otherUser}
                   handleOthersView={this.props.handleOthersView}
                   />
