@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import {Redirect} from 'react-router-dom'
 import LoginForm from '../LoginForm/LoginForm'
 import SignupForm from '../SignupForm/SignupForm';
-import Main from '../Main/Main';
-import UserProfile from '../UserProfile/UserProfile'
+
 
 export default class LandingPage extends Component {
   constructor() {
@@ -49,7 +48,6 @@ export default class LandingPage extends Component {
     if(this.props.authenticated){
       return(
         <Redirect to='/user' />
-        //Try redirect here?????
       )
     }
     else if(!this.props.authenticated){

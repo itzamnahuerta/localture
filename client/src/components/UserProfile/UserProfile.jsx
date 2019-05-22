@@ -88,11 +88,12 @@ class UserProfile extends Component {
         else if(this.props.authenticated && !this.state.editInterests){
             return(
                 <div>
-                      
+        {/* <Link to='/dashboard' >Dashboard</Link>               */}
         <Link to='/othersprofile'
             onClick={this.props.handleOthersView}>SOMEONE ELSEEEEEE</Link>
         <Link to='/travelers_near_you'>Travelers Near You</Link>
         <Link to='/interests'>Interests</Link>
+        <Link to='/dashboard'>Dashboard</Link>
                     <div>
                         <h1>My Profile</h1>
                     </div>

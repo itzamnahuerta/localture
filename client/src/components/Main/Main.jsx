@@ -4,9 +4,10 @@ import UserProfile from '../UserProfile/UserProfile'
 import OthersProfile from '../OthersProfile/OthersProfile';
 import LandingPage from '../LandingPage/LandingPage';
 import TravelersNear from '../TravelersNear/TravelersNear';
+import Dash from '../Dash/Dash'
 
 
-export default class Dashboard extends Component {
+export default class Main extends Component {
   constructor () {
     super();
     this.state = {
@@ -36,10 +37,19 @@ export default class Dashboard extends Component {
                 otherUser={this.props.otherUser}
                 handleOthersView={this.props.handleOthersView}
               />} />
+              {/* <Route path="/dashboard" 
+                render={() => <Dashboard />}/> */}
     
               <Route exact path="/travelers_near_you"
                 render={() => <TravelersNear  
                   authenticated={this.props.isAuthenticated}/>
+              }/>
+              <Route path="/dashboard"
+                render={() => <Dash 
+                  authenticated={this.props.isAuthenticated}
+                  otherUser={this.props.otherUser}
+                  handleOthersView={this.props.handleOthersView}
+                  />
               }/>
               <Route path="/user"
                 render={() => <UserProfile 
