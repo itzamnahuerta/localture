@@ -5,7 +5,6 @@ import Entertainment from '../../assets/entertainment.png';
 import Food from '../../assets/food.png';
 import Music from '../../assets/music.png';
 import Active from '../../assets/active.png';
-import Interests from '../Interests/Interests'
 
 
 
@@ -89,17 +88,19 @@ class UserProfile extends Component {
         else if(this.props.authenticated && !this.state.editInterests){
             return(
                 <div>
-                      
-        <Link to='/othersprofile'>SOMEONE ELSEEEEEE</Link>
+        {/* <Link to='/dashboard' >Dashboard</Link>               */}
+        <Link to='/othersprofile'
+            onClick={this.props.handleOthersView}>SOMEONE ELSEEEEEE</Link>
         <Link to='/travelers_near_you'>Travelers Near You</Link>
         <Link to='/interests'>Interests</Link>
+        <Link to='/dashboard'>Dashboard</Link>
                     <div>
                         <h1>My Profile</h1>
                     </div>
 
                     <div>
                         <div>IMAGE</div>
-                        <div>HOME AREA</div>
+                        <div><h1>{this.props.home_area}</h1></div>
                     </div>
 
                     <div>
@@ -114,25 +115,30 @@ class UserProfile extends Component {
                             name='Music'
                             handleEditInterests={this.handleEditInterests}
                             subcat={this.state.music}
-                            image={<img src={Music} alt='' />}
+                            image={<img src={Music} alt='' 
+                            otherUser={this.props.otherUser}/>}
                         />
+                        {this.props.otherUser}
                         <ProfileInterests 
                             name='Food'
                             handleEditInterests={this.handleEditInterests}
                             subcat={this.state.food}
-                            image={<img src={Food} alt='' />}
+                            image={<img src={Food} alt='' 
+                            otherUser={this.props.otherUser}/>}
                         />
                         <ProfileInterests 
                             name='Entertainment'
                             handleEditInterests={this.handleEditInterests}
                             subcat={this.state.entertainment}
-                            image={<img src={Entertainment} alt='' />}
+                            image={<img src={Entertainment} alt='' 
+                            otherUser={this.props.otherUser}/>}
                         />
                         <ProfileInterests 
                             name='Active'
                             handleEditInterests={this.handleEditInterests}
                             subcat={this.state.active}
-                            image={<img src={Active} alt='' />}
+                            image={<img src={Active} alt='' 
+                            otherUser={this.props.otherUser}/>}
                         />
                     </div>
                 </div>

@@ -3,20 +3,26 @@ import { Redirect } from 'react-router-dom'
 
 class TravelersNear extends Component {
     render() {
-        if(!this.props.authenticated){
-            return <Redirect to='/' />
-        }
-        else{
+        // if(!this.props.authenticated){
+        //     return <Redirect to='/' />
+        // }
+        // else{
             return (
                 <div>
-                    Travelers Near You
-                    {/* make a componenet that holds data for other users */}
-                    {/* add links to route to <OthersProfile /> on each componenet */}
-                    <h1>HELLPP</h1>
+                    <div>
+                        <h2>Send Reccomendations</h2>
+                    </div>
+                    <div>
+                        IMAGES OF RECCOMENDATION CATEGORIES
+                    </div>
+                    <div>
+                        Component that will show people looking for reccomendations
+                    </div>
+
                 </div>
             );
         }
-    }
+    // }
 }
 
 export default TravelersNear;
