@@ -32,7 +32,6 @@ export default class LandingPageForm extends Component {
           type="text"
           name="username"
           value={username}
-          placeholder="Username"
           onChange={this.props.handleLoginFormChange}
         />
         <label> Password </label>
@@ -41,7 +40,6 @@ export default class LandingPageForm extends Component {
           type="text"
           name="password"
           value={password}
-          placeholder="Password"
           onChange={this.props.handleLoginFormChange}
         />
 

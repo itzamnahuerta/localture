@@ -7,6 +7,7 @@ import Music from '../../assets/music.png';
 import Active from '../../assets/active.png';
 import Interests from '../Interests/Interests'
 
+import ProfileImage from '../../media/profile_photo.png'
 
 
 class UserProfile extends Component {
@@ -88,27 +89,28 @@ class UserProfile extends Component {
         }
         else if(this.props.authenticated && !this.state.editInterests){
             return(
-                <div>
+                <div className="user-profile">
                       
-        <Link to='/othersprofile'>SOMEONE ELSEEEEEE</Link>
-        <Link to='/travelers_near_you'>Travelers Near You</Link>
-        <Link to='/interests'>Interests</Link>
-                    <div>
-                        <h1>My Profile</h1>
+                        <Link to='/othersprofile'>SOMEONE ELSEEEEEE</Link>
+                        <Link to='/travelers_near_you'>Travelers Near You</Link>
+                        <Link to='/interests'>Interests</Link>
+                    <div className="user-profile-heading">
+                        <h2>My Profile</h2>
                     </div>
 
-                    <div>
-                        <div>IMAGE</div>
-                        <div>HOME AREA</div>
+                    <div className="profile-container">
+                        <img className="profile-photo" src={ProfileImage}/> 
+                        <div className="profile-name"> Sample Name </div> 
+                        <div className="hometown"> Brooklyn, NY </div>
+
+
                     </div>
 
-                    <div>
-                        <h1>Interests</h1>
+                    <div className="user-profile-heading">
+                        <h2>Interests</h2>
                     </div>
-                    <div>Music</div>
-
                     
-                    <div>
+                    <div className="profile-interests">
                         {/* .map through instrests and reder one for each */}
                         <ProfileInterests 
                             name='Music'

@@ -26,14 +26,18 @@ class ProfileInterests extends Component {
         }
         else if(!this.state.editInterests) {
             return (
-                <div>
-                    {this.props.image}
-                    <img 
+                <div className="categories">
+                    {/* <img 
                     src={Note} 
                     onClick={this.props.handleEditInterests}
-                    id={this.props.name}/>
-                    <div>{this.props.name}</div>
-                    <ul>
+                    id={this.props.name}/> */}
+                    <div className="subcategory-header"> 
+                    <div className="subcategory-icon">{this.props.image} </div>
+                    <div className="subcategory-name">{this.props.name}</div>
+                    
+                    </div>
+
+                    <ul className="subcategory-list">
                         <li>Sub Category</li>
                         <li>Sub Category</li>
                         <li>Sub Category</li>
