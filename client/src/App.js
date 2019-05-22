@@ -80,7 +80,7 @@ class App extends Component {
   
   render() {
     console.log('is menu clicked ====>',this.state.is_hamburger_menu_clicked)
-    const showHamburgerIcon = this.is_hamburger_menu_clicked === true ? 'icon-menu-invisible' : 'hamburger-icon'
+    const showHamburgerIcon = this.is_hamburger_menu_clicked === true ? 'bye' : 'hamburger-icon'
 
     return (
       <div className="App">
@@ -93,7 +93,7 @@ class App extends Component {
         </div>
 
         <HamburgerMenu 
-          handleMenuOpen={this.state.handleMenuOpen}
+          handleMenuOpen={this.handleMenuOpen}
           is_hamburger_menu_clicked={this.state.is_hamburger_menu_clicked}
         />
         <Main

@@ -30,9 +30,7 @@
         margin-left: 85%;
         font-size: 16pt;
     }
-
 }
-
 
 .xMark {
     cursor: pointer;
@@ -63,6 +61,16 @@
     transition: .5s ease-in-out;
     cursor: pointer;
 }
+.bye {
+    display: none;
+}
+
+
+.hamburger-icon-invisible{
+    position: absolute;
+    left: -18em;
+}
+
 .line {
   display: block;
   position: absolute;
@@ -106,25 +114,3 @@
     transform-origin: left center;
   }
   
-//   .hamburger-icon.open div:nth-child(1) {
-//     -webkit-transform: rotate(45deg);
-//     -moz-transform: rotate(45deg);
-//     -o-transform: rotate(45deg);
-//     transform: rotate(45deg);
-//     top: -3px;
-//     left: 8px;
-//   }
-  
-//   .hamburger-icon.open div:nth-child(2) {
-//     width: 0%;
-//     opacity: 0;
-//   }
-  
-//   .hamburger-icon.open div:nth-child(3) {
-//     -webkit-transform: rotate(-45deg);
-//     -moz-transform: rotate(-45deg);
-//     -o-transform: rotate(-45deg);
-//     transform: rotate(-45deg);
-//     top: 39px;
-//     left: 8px;
-//   }
