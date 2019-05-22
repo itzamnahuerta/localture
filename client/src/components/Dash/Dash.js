@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TravelersNear from '../TravelersNear/TravelersNear'
+import MyTrips from '../MyTrips/MyTrips'
 
 class Dash extends Component {
     render() {
@@ -7,41 +8,18 @@ class Dash extends Component {
             <div>
                 <h1>Dashboard</h1>
                 <div>
-                    <h2>My Trips</h2>
-                </div>
-                <div>
-                    <h2>Travelers to my city</h2>
+                    <div>
+                        <h3>My Trips</h3>
+                    </div>
+                    <div>
+                        <h3>Travelers to my city</h3>
+                    </div>
                 </div>
                 <div>IMAGE OF CITY</div>
                 
                     {/* THIS PART IS DIFFERENT WITH THE CONDITIONAL RENDER DEPENDING ON WHICH TAB IS CLICK.  */}
-                    {/* THIS SECTION IS FOR TRAVELERS TO MY CITY */}
-
-
-
-
-                    {/* //not rendering components */}
-                <TravelersNear />
-
-
-
-                <div>
-                        <h2>Send Reccomendations</h2>
-                    </div>
-                    <div>
-                        IMAGES OF RECCOMENDATION CATEGORIES
-                    </div>
-
-
-
-                    <div>
-                        Component that will show people looking for reccomendations
-                    </div>
-                <div>
-                        Travelers to my city
-                        or
-                        My city
-                    </div>
+                {/* <TravelersNear /> */}
+                <MyTrips />
             </div>
         );
     }
