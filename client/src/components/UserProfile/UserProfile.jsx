@@ -196,42 +196,18 @@ class UserProfile extends Component {
                     </ul>
                 </div>
             )
-            // return <h1>Working</h1>
         }
         else if(this.props.authenticated && !this.state.editInterests){
             return(
-<<<<<<< HEAD
                 <div className="user-profile">
-                      
-                        <Link to='/othersprofile'>SOMEONE ELSEEEEEE</Link>
-                        <Link to='/travelers_near_you'>Travelers Near You</Link>
-                        <Link to='/interests'>Interests</Link>
+
                     <div className="user-profile-heading">
                         <h2>My Profile</h2>
                     </div>
-
                     <div className="profile-container">
                         <img className="profile-photo" src={ProfileImage}/> 
                         <div className="profile-name"> Sample Name </div> 
                         <div className="hometown"> Brooklyn, NY </div>
-
-=======
-                <div>
-        {/* <Link to='/dashboard' >Dashboard</Link>               */}
-        <Link to='/othersprofile'
-            onClick={this.props.handleOthersView}>SOMEONE ELSEEEEEE</Link>
-        <Link to='/travelers_near_you'>Travelers Near You</Link>
-        <Link to='/interests'>Interests</Link>
-        <Link to='/dashboard'>Dashboard</Link>
-                    <div>
-                        <h1>My Profile</h1>
-                    </div>
-
-                    <div>
-                        <div>IMAGE</div>
-                        <div><h1>{this.props.home_area}</h1></div>
-                    </div>
->>>>>>> origin
 
                     </div>
 
