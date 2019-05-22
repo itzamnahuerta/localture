@@ -1,43 +1,46 @@
+@import 'Colors';
 
 .sidebar {
     height: 60vh;
     width: 16em;
-    left: -16em;
+    left: -17em;
     position: fixed;
     top: 1em;
     z-index: 1000;
     transition: all 0.4s;
-    background-color: $lightgreen;
-    opacity: .9;
+    background-color: white;
+    border: 2px solid lightgray;
     text-align: center;
     overflow: scroll;
+    .sidebar-title {
+        margin-bottom: 1em;
+        color: $bluegreen;
+    }
 
     a {
         text-decoration: none;
         margin-bottom: 2em;
         margin-left: 0;
         padding: .4em 1em;
-        box-shadow: 4px 4px 10px $shadow;
+        // box-shadow: 1px 2px 2px $shadow;
         color: #000;
         transition: all 0.4s;
         border-radius: 2px;
+        border-bottom:2px solid $bluegreen;
+
     } 
-    a:hover {
-        background-color: sandybrown;
-    }
     .xMark {
         cursor: pointer;
         margin-left: 85%;
         font-size: 16pt;
     }
-
 }
-
 
 .xMark {
     cursor: pointer;
     margin-left: 10%;
-    font-size: 4em;
+    font-size: 12em;
+    color:  $bluegreen;
 }
 .open {
     font-size: 10pt;
@@ -63,12 +66,22 @@
     transition: .5s ease-in-out;
     cursor: pointer;
 }
+.bye {
+    display: none;
+}
+
+
+.hamburger-icon-invisible{
+    position: absolute;
+    left: -18em;
+}
+
 .line {
   display: block;
   position: absolute;
   height: .3em;
   width: 2em;
-  background: $blue;
+  background: white;
   border-radius: 1em;
   opacity: 1;
   left: 0;
@@ -106,25 +119,3 @@
     transform-origin: left center;
   }
   
-//   .hamburger-icon.open div:nth-child(1) {
-//     -webkit-transform: rotate(45deg);
-//     -moz-transform: rotate(45deg);
-//     -o-transform: rotate(45deg);
-//     transform: rotate(45deg);
-//     top: -3px;
-//     left: 8px;
-//   }
-  
-//   .hamburger-icon.open div:nth-child(2) {
-//     width: 0%;
-//     opacity: 0;
-//   }
-  
-//   .hamburger-icon.open div:nth-child(3) {
-//     -webkit-transform: rotate(-45deg);
-//     -moz-transform: rotate(-45deg);
-//     -o-transform: rotate(-45deg);
-//     transform: rotate(-45deg);
-//     top: 39px;
-//     left: 8px;
-//   }

@@ -38,8 +38,7 @@ class Dash extends Component {
                 <div>IMAGE OF CITY</div>
                     {this.handleTabSwitch()}
                     {/* THIS PART IS DIFFERENT WITH THE CONDITIONAL RENDER DEPENDING ON WHICH TAB IS CLICK.  */}
-                {/* <TravelersNear /> */}
-                {/* <MyTrips /> */}
+
             </div>
         );
     }
