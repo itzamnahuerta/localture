@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const HamburgerMenu = (props) => {
     const showMenu = props.is_hamburger_menu_clicked === true ? 'sidebar open' : 'sidebar'
+
     console.log('what about now ', props.is_hamburger_menu_clicked)
     return(
 
