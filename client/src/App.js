@@ -21,6 +21,7 @@ class App extends Component {
       first_name: '',
       last_name: '',
       isAuthenticated: false,
+      otherUser: false,
       is_hamburger_menu_clicked: false
 
     }
@@ -34,6 +35,10 @@ class App extends Component {
         [fieldName] : value,
         error: false
     })
+  }
+
+  handleOthersView = () => {
+    this.setState({otherUser: true})
   }
 
   async handleLogin() {
@@ -109,6 +114,8 @@ class App extends Component {
           first_name={this.state.first_name}
           last_name={this.state.last_name}
           formToggle={this.formToggle}
+          otherUser={this.state.otherUser}
+          handleOthersView={this.handleOthersView}
         />
   
       </div>
