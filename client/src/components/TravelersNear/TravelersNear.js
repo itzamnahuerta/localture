@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import Music from '../../assets/music.png'
+import Food from '../../assets/food.png'
+import Entertainment from '../../assets/entertainment.png'
+import Active from '../../assets/active.png'
 import { Redirect } from 'react-router-dom'
 
 class TravelersNear extends Component {
