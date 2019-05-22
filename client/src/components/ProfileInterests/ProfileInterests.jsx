@@ -28,10 +28,12 @@ class ProfileInterests extends Component {
             return <img 
                     src={Note} 
                     onClick={this.props.handleEditInterests}
-                    id={this.props.name}/>
+                    id={this.props.name}
+                    alt='' 
+                    />
         }
         else{
-            return <img src={Add} />
+            return <img src={Add} alt=''/>
         }
     }
 
@@ -43,7 +45,9 @@ class ProfileInterests extends Component {
                     <img 
                         src={Note} 
                         onClick={this.props.handleEditInterests}
-                        id={this.props.name}/>
+                        id={this.props.name}
+                        alt=''
+                        />
                     <div>{this.props.name}</div>
 
 
@@ -51,10 +55,13 @@ class ProfileInterests extends Component {
 
 
                     <ul>
-                        <li>Sub Category</li>
-                        <li>Sub Category</li>
-                        <li>Sub Category</li>
-                        <li>Sub Category</li>
+                        {
+                            this.props.selectedInterest.map(interest => {
+                                return(
+                                    <li>interest</li>
+                                )
+                            })
+                        }
                     </ul>
                 </div>
             )
@@ -69,10 +76,13 @@ class ProfileInterests extends Component {
                         id={this.props.name}/>
                     <div>{this.props.name}</div>
                     <ul>
-                        <li>Sub Category</li>
-                        <li>Sub Category</li>
-                        <li>Sub Category</li>
-                        <li>Sub Category</li>
+                    {
+                            this.props.selectedInterest.map(interest => {
+                                return(
+                                    <li>{interest}</li>
+                                )
+                            })
+                        }
                     </ul>
                 </div>
             )

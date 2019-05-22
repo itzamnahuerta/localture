@@ -20,7 +20,82 @@ class UserProfile extends Component {
 
             food: ["Mexican", "Turkish", "French", "Italian", "Vietnamese", "Japanese", "Korean", "Ethiopian", "Mediterranean", "Vegan", "American", "Southwestern", "Southern", "Indian", "English", "Thai", "Japanese", "Cuban", "Burmese", "Spanish", "Chinese", "Irish", "Swedish", "Tapas", "Hungarian"],
             editInterests: false,
-            selectedInterest: []
+            selectedMusic: [],
+            selectedFood: [],
+            selectedEntertainment: [],
+            selectedActive: []
+        }
+    }
+    addMusic = (e) => {
+        let selectedMusic = this.state.selectedMusic;
+        let selected = e.target.id;
+        console.log(selected)
+        if(selectedMusic.includes(selected)){
+            let i = selectedMusic.indexOf(selected)
+            console.log(i)
+            selectedMusic.splice(i,1);
+            console.log(selectedMusic)
+            this.setState({selectedMusic})
+        }
+        else{
+            selectedMusic.push(selected)
+            this.setState({selectedMusic})
+        }
+    }
+    addFood = (e) => {
+        let selectedFood = this.state.selectedFood;
+        let selected = e.target.id;
+        console.log(selected)
+        if(selectedFood.includes(selected)){
+            let i = selectedFood.indexOf(selected)
+            console.log(i)
+            selectedFood.splice(i,1);
+            console.log(selectedFood)
+            this.setState({selectedFood})
+        }
+        else{
+            selectedFood.push(selected)
+            this.setState({selectedFood})
+        }
+    }
+    handleEditInterests = (e) => {
+        e.preventDefault();
+        this.setState({
+            editInterests: true,
+            selectedInterest: e.target.id
+        })
+    }
+
+    addActive = (e) => {
+        let selectedActive = this.state.selectedActive;
+        let selected = e.target.id;
+        console.log(selected)
+        if(selectedActive.includes(selected)){
+            let i = selectedActive.indexOf(selected)
+            console.log(i)
+            selectedActive.splice(i,1);
+            console.log(selectedActive)
+            this.setState({selectedActive})
+        }
+        else{
+            selectedActive.push(selected)
+            this.setState({selectedActive})
+        }
+    }
+    addEntertainment = (e) => {
+        let selectedEntertainment = this.state.selectedEntertainment;
+        let selected = e.target.id;
+        console.log(selected)
+        if(selectedEntertainment.includes(selected)){
+            let i = selectedEntertainment.indexOf(selected)
+            console.log(i)
+            selectedEntertainment.splice(i,1);
+            console.log(selectedEntertainment)
+            this.setState({selectedEntertainment})
+        }
+        else{
+            selectedEntertainment.push(selected)
+            this.setState({selectedEntertainment})
         }
     }
     handleEditInterests = (e) => {
@@ -37,28 +112,65 @@ class UserProfile extends Component {
             console.log(this.state.music);
             return this.state.music.map((m, i) => {
                 console.log('mapping', m)
-                return <li key={i}>{m}</li>
+                return (
+                    <div>
+                        <input 
+                            type='checkbox' 
+                            id={m} 
+                            onClick={this.addMusic}
+                            />
+                        <li key={i}>{m}</li>
+                    </div>
+                        )
+                
                 })
         }
         if(this.state.selectedInterest == "Entertainment"){
             console.log(this.state.entertainment);
             return this.state.entertainment.map((m, i) => {
                 console.log('mapping', m)
-                return <li key={i}>{m}</li>
+                return (
+                    <div>
+                        <input 
+                            type='checkbox' 
+                            id={m} 
+                            onClick={this.addEntertainment}
+                            />
+                        <li key={i}>{m}</li>
+                    </div>
+                )
                 })
         }
         if(this.state.selectedInterest == "Active"){
             console.log(this.state.active);
             return this.state.active.map((m, i) => {
                 console.log('mapping', m)
-                return <li key={i}>{m}</li>
+                return (
+                    <div>
+                        <input 
+                            type='checkbox' 
+                            id={m} 
+                            onClick={this.addActive}
+                            />
+                        <li key={i}>{m}</li>
+                    </div>
+                )
                 })
         }
         if(this.state.selectedInterest == "Food"){
             console.log(this.state.food);
             return this.state.food.map((m, i) => {
                 console.log('mapping', m)
-                return <li key={i}>{m}</li>
+                return (
+                    <div>
+                        <input 
+                            type='checkbox' 
+                            id={m} 
+                            onClick={this.addFood}
+                            />
+                        <li key={i}>{m}</li>
+                    </div>
+                )
                 })
         }
     }
@@ -113,6 +225,7 @@ class UserProfile extends Component {
                         {/* .map through instrests and reder one for each */}
                         <ProfileInterests 
                             name='Music'
+                            selectedInterest={this.state.selectedMusic}
                             handleEditInterests={this.handleEditInterests}
                             subcat={this.state.music}
                             image={<img src={Music} alt='' 
@@ -121,6 +234,7 @@ class UserProfile extends Component {
                         {this.props.otherUser}
                         <ProfileInterests 
                             name='Food'
+                            selectedInterest={this.state.selectedFood}
                             handleEditInterests={this.handleEditInterests}
                             subcat={this.state.food}
                             image={<img src={Food} alt='' 
@@ -128,6 +242,7 @@ class UserProfile extends Component {
                         />
                         <ProfileInterests 
                             name='Entertainment'
+                            selectedInterest={this.state.selectedEntertainment}
                             handleEditInterests={this.handleEditInterests}
                             subcat={this.state.entertainment}
                             image={<img src={Entertainment} alt='' 
@@ -135,6 +250,7 @@ class UserProfile extends Component {
                         />
                         <ProfileInterests 
                             name='Active'
+                            selectedInterest={this.state.selectedActive}
                             handleEditInterests={this.handleEditInterests}
                             subcat={this.state.active}
                             image={<img src={Active} alt='' 
