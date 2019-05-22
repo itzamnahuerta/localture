@@ -6,10 +6,11 @@ import Active from '../../assets/active.png'
 import { Redirect } from 'react-router-dom'
 import Sadiyah from '../../assets/Sadiyah.jpg'
 import Heart from '../../assets/heart.svg'
-import Angela from '../../assets/Angela.png'
-import Amelie from '../../assets/Amelie.png'
-import Jacques from '../../assets/Jacques.png'
-import Charolotte from '../../assets/Charlotte.png'
+import Pierre from '../../assets/Pierre.jpg'
+import Ronan from '../../assets/Ronan.jpg'
+import Noriko from '../../assets/Noriko.jpg'
+import Jaime from '../../assets/Jamie.png'
+import Analisa from '../../assets/Analisa.png'
 
 
 class TravelersNear extends Component {
@@ -25,102 +26,84 @@ class TravelersNear extends Component {
                         <hr/>
                     </div>
                     <div>
+                        {/* <img src={All} alt=''/> */}
                         <img src={Music} alt=''/>
                         <img src={Food} alt=''/>
                         <img src={Entertainment} alt=''/>
                         <img src={Active} alt=''/>
-                        <hr/>
+                    <hr/>
                     </div>
-                    <div>
-                    <div>
-                    <img src={Sadiyah} alt='' />
-                        <div>Sadiyah</div>
-                        <div>Paris, France</div>
-                    </div>
-                    <div>
-                        <div>Business Image</div>
-                        <div>Petite Fleur</div>
-                        <div>5 rue Damremont, 75018 Paris, France</div>
-                    </div>
-                    <div>Delicious escargot, rib steak, creme brulle! The location is very nice as well. Would absolutely recommend on a visit to Montmarte! </div>
-                    <img src={Heart} alt='' />
-                    <div>BBQ, Animation, Oenophile</div>
-                </div>
 
-                <hr/>
-                
-                <div>
                     <div>
-                    <img src={Angela} alt='' />
-                        <div>Angela</div>
-                        <div>Paris, France</div>
+                        <div>
+                            <img src={Pierre} alt='' />
+                            <div>Pierre G.</div>
+                            <div><strong>Pierre</strong> is looking for a barbeque joint in the <strong>East Village</strong></div>
+                        </div>
+                        <img src={Heart} alt='' />
+                        <div>BBQ, Animation, Oenophile</div>
                     </div>
-                    <div>
-                        <div>Business Image</div>
-                        <div>La Min</div>
-                        <div>45 rue de Montreuil, 75011 Paris, France</div>
-                    </div>
-                    <div>We ate three courses, both different, and all was so good! Best place in Paris so far! Waiter was so nice and the place was cosy. Absolutely recommend! </div>
-                    <img src={Heart} alt='' />
-                    <div>Cocktail Culture, Fashion, Vintage Shopping</div>
-                </div>
 
-                <hr/>
+                    <hr/>
                 
-                <div>
                     <div>
-                    <img src={Amelie} alt='' />
-                        <div>Amelie</div>
-                        <div>Paris, France</div>
+                        <div>
+                            <img src={Sadiyah} alt='' />
+                            <div>Sadiyah G.</div>
+                            <div><strong>Sadiyah G.</strong> is looking for Jazz events in the <strong>West Village</strong>, NYC</div>
+                        </div>
+                        <img src={Heart} alt='' />
+                        <div>Cocktail Culture, Fashion, Vintage Shopping</div>
                     </div>
-                    <div>
-                        <div>Business Image</div>
-                        <div>Petit Boutary</div>
-                        <div>16 rue Jacquemont, 75017 Paris, France</div>
-                    </div>
-                    <div>The food and service was very very good but their wine was simply superb. The sommelier was incredibly knowledgable and passionate and enhanced the whole evening to a high end dining experience. </div>
-                    <img src={Heart} alt='' />
-                    <div>Record Shopping, Fashion, Animation</div>
-                </div>
 
-                <hr/>
+                    <hr/>
                 
-                <div>
                     <div>
-                    <img src={Jacques} alt='' />
-                        <div>Jacques</div>
-                        <div>Paris, France</div>
+                        <div>
+                            <img src={Ronan} alt='' />
+                            <div>Ronan D.</div>
+                            <div><strong>Ronan D.</strong> is looking for a craft beer garden in <strong>Astoria, Queens</strong></div>
+                        </div>
+                        <img src={Heart} alt='' />
+                        <div>Record shopping, Fashion, Animation</div>
                     </div>
-                    <div>
-                        <div>Business Image</div>
-                        <div>Signature Montmartre</div>
-                        <div>12 rue des Trois Freres, 75018 Paris, France</div>
-                    </div>
-                    <div>Worth every euro and more. Prawn pasta was the best dish. Absolutely recommend for couples and special occasions. Very good and rich champagne from local winery. Fabulous service!</div>
-                    <img src={Heart} alt='' />
-                    <div>Southern Culture, Film, Shopping</div>
-                </div>
 
-                <hr/>
+                    <hr/>
                 
-                <div>
                     <div>
-                        <img src={Charolotte} alt='' />
-                        <div>Charlotte</div>
-                        <div>Paris, France</div>
+                        <div>
+                            <img src={Noriko} alt='' />
+                            <div>Noriko L.</div>
+                            <div><strong>Noriko L.</strong> is looking for a hip-hop spot in <strong>Flatiron, </strong>NYC</div>
+                        </div>
+                        <img src={Heart} alt='' />
+                        <div>Record Shopping, Film, Southern food</div>
                     </div>
-                    <div>
-                        <div>Business Image</div>
-                        <div>Opalto</div>
-                        <div>69 rue de Charonne, 75011 Paris, France</div>
-                    </div>
-                    <div>Very good planches apero.   Such a good address in the 11th!</div>
-                    <img src={Heart} alt='' />
-                    <div>Pottery, Vegan Cooking, Gardening</div>
-                </div>
 
-                <hr/>
+                    <hr/>
                 
+                    <div>
+                        <div>
+                            <img src={Analisa} alt='' />
+                            <div>Analisa K.</div>
+                            <div><strong>Analisa K.</strong> is looking for Mexican food near <strong>Times Square</strong></div>
+                        </div>
+                        <img src={Heart} alt='' />
+                        <div>Fashion, Vintage shopping, Cocktail Culture</div>
+                    </div>
+
+                    <hr/>
+
+                    <div>
+                        <div>
+                            <img src={Jaime} alt='' />
+                            <div>Jaime G.</div>
+                            <div><strong>Jaime G.</strong> is looking for handcrafted art bear <strong>DUMBO, BK</strong></div>
+                        </div>
+                        <img src={Heart} alt='' />
+                        <div>Pottery, Vegan Cooking, Gardens</div>
+                    </div>
+
                 </div>
             );
         }
