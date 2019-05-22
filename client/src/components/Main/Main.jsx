@@ -3,7 +3,6 @@ import { Route, Switch, Link } from 'react-router-dom'
 import UserProfile from '../UserProfile/UserProfile'
 import OthersProfile from '../OthersProfile/OthersProfile';
 import LandingPage from '../LandingPage/LandingPage';
-import Interests from '../Interests/Interests.jsx';
 import TravelersNear from '../TravelersNear/TravelersNear';
 
 
@@ -16,10 +15,13 @@ export default class Dashboard extends Component {
       country: '',
       email: '',
       first_name: '',
-      last_name: ''
+      last_name: '',
     }
   }
+
+
   render() {
+
     return (
       <div>
         <Switch> 
@@ -37,10 +39,6 @@ export default class Dashboard extends Component {
     
               <Route exact path="/travelers_near_you"
                 render={() => <TravelersNear  
-                  authenticated={this.props.isAuthenticated}/>
-              }/>
-              <Route path="/interests"
-                render={() => <Interests 
                   authenticated={this.props.isAuthenticated}/>
               }/>
               <Route path="/user"

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';import active from '../../assets/active.png';
-import Interests from '../Interests/Interests'
 import Entertainment from '../../assets/entertainment.png';
 import Food from '../../assets/food.png';
 import Music from '../../assets/music.png';
@@ -18,6 +17,9 @@ class ProfileInterests extends Component {
     handleEditInterests = (e) => {
         e.preventDefault();
         this.setState({editInterests: true})
+    }
+    componentWillReceiveProps = () => {
+
     }
 
     iconSwitch = () => {

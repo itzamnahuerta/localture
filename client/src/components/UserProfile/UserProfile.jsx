@@ -5,7 +5,6 @@ import Entertainment from '../../assets/entertainment.png';
 import Food from '../../assets/food.png';
 import Music from '../../assets/music.png';
 import Active from '../../assets/active.png';
-import Interests from '../Interests/Interests'
 
 
 
