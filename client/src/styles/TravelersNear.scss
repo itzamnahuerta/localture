@@ -1,8 +1,103 @@
 @import 'Colors';
 
-.center {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
-  }
+.travelers-near {
+    .send-recc {
+        background-color: $lightgreen;
+        height: 3em;
+        margin-top: -1.6em;
+        
+    }
+    .icon-interests{
+        margin-top: 1em;
+        justify-content: center;
+        margin-left: 4em;
+        display: grid;
+        grid-template-columns: repeat(5, 5em);
+        grid-template-rows: 2em 2em;
+        img:nth-child(1) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        img:nth-child(2) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        img:nth-child(3) {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            
+        }
+        img:nth-child(4) {
+            grid-column: 4/5;
+            grid-row: 1/2;
+        }
+        
+        .icon-music-title {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            margin-top: 0.3em;
+            margin-left: 1.7em;
+        }
+        .icon-food-title {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            margin-top: 0.3em;
+            margin-left: 1.7em;
+        }
+        .icon-shows-title {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            margin-top: 0.3em;
+            margin-left: 1.3em;
+        }
+        .icon-outdoor-title {
+            grid-column: 4/5;
+            grid-row: 2/3;
+            margin-top: 0.3em;
+            margin-left: .9em;
+        }
+     }
+
+     .user-interest-post {
+        width: 90%;
+        height: 8em;
+        margin: 1em;
+        border: 3px solid lightgray;
+
+        display: grid;
+        grid-template-columns: 6em 22em;
+        grid-template-rows: 4em 4em;
+        grid-template-areas:
+         "a b "
+         "a c " ;
+
+        .user-info {
+            grid-area: a;
+        }
+        .interest-post {
+            grid-area: b;
+            margin-top: 1em;
+        }
+        .love-interests {
+            grid-area: c;
+            display: flex;
+            margin-top: 2em;
+        }
+     }
+     .user-profile-photo {
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+        margin-top: 2em;
+        margin-left: 1em;
+
+    }
+    .heart-icon {
+        width: 1em;
+        height: 1em;
+        margin-right: 1em;
+    }
+
+
+}
+
