@@ -20,89 +20,56 @@ class TravelersNear extends Component {
         // }
         // else{
             return (
-                <div>
-                    <div>
-                        <h2>Send Reccomendations</h2>
-                        <hr/>
-                    </div>
-                    <div>
-                        {/* <img src={All} alt=''/> */}
-                        <img src={Music} alt=''/>
-                        <img src={Food} alt=''/>
-                        <img src={Entertainment} alt=''/>
-                        <img src={Active} alt=''/>
-                    <hr/>
+                <div className="travelers-near">
+                    <div className="send-recc">
+                        <h4>Send Reccomendations</h4>
                     </div>
 
-                    <div>
-                        <div>
-                            <img src={Pierre} alt='' />
+                    <div className="icon-interests" >
+                    <img src={Music} alt=''/>
+                    <p className="icon-music-title"> Music </p> 
+
+                    <img src={Food} alt=''/>
+                    <p className="icon-food-title"> Food </p>
+
+                    <img src={Entertainment} alt=''/>
+                    <p className="icon-shows-title"> Shows</p>
+
+                    <img src={Active} alt=''/>
+                    <p className="icon-outdoor-title"> Outdoors </p>
+                </div>
+
+                    <div className="user-interest-post">
+                        <div className="user-info"> 
+                            <img className="user-profile-photo" src={Pierre} alt='' />
                             <div>Pierre G.</div>
-                            <div><strong>Pierre</strong> is looking for a barbeque joint in the <strong>East Village</strong></div>
                         </div>
-                        <img src={Heart} alt='' />
-                        <div>BBQ, Animation, Oenophile</div>
+                        <div className="interest-post">
+                            <strong>Pierre</strong> 
+                            is looking for a barbeque joint in the 
+                            <strong>East Village</strong>
+                        </div>
+                        <div className="love-interests"> 
+                            <img className="heart-icon" src={Heart} alt='' />
+                            <div className="personal-interests">BBQ, Animation, Oenophile</div>  
+                        </div>                      
                     </div>
-
-                    <hr/>
-                
-                    <div>
-                        <div>
-                            <img src={Sadiyah} alt='' />
+                    <div className="user-interest-post">
+                         <div className="user-info"> 
+                            <img className="user-profile-photo" src={Sadiyah} alt='' />
                             <div>Sadiyah G.</div>
-                            <div><strong>Sadiyah G.</strong> is looking for Jazz events in the <strong>West Village</strong>, NYC</div>
                         </div>
-                        <img src={Heart} alt='' />
-                        <div>Cocktail Culture, Fashion, Vintage Shopping</div>
+                        <div  className="interest-post">
+                            <strong>Sadiyah G.</strong> 
+                            is looking for Jazz events in the
+                            <strong>West Village</strong>, NYC
+                        </div>
+                        <div className="love-interests"> 
+                            <img  className="heart-icon" src={Heart} alt='' />
+                            <div>Cocktail Culture, Fashion, Vintage Shopping</div>
+                        </div>
                     </div>
 
-                    <hr/>
-                
-                    <div>
-                        <div>
-                            <img src={Ronan} alt='' />
-                            <div>Ronan D.</div>
-                            <div><strong>Ronan D.</strong> is looking for a craft beer garden in <strong>Astoria, Queens</strong></div>
-                        </div>
-                        <img src={Heart} alt='' />
-                        <div>Record shopping, Fashion, Animation</div>
-                    </div>
-
-                    <hr/>
-                
-                    <div>
-                        <div>
-                            <img src={Noriko} alt='' />
-                            <div>Noriko L.</div>
-                            <div><strong>Noriko L.</strong> is looking for a hip-hop spot in <strong>Flatiron, </strong>NYC</div>
-                        </div>
-                        <img src={Heart} alt='' />
-                        <div>Record Shopping, Film, Southern food</div>
-                    </div>
-
-                    <hr/>
-                
-                    <div>
-                        <div>
-                            <img src={Analisa} alt='' />
-                            <div>Analisa K.</div>
-                            <div><strong>Analisa K.</strong> is looking for Mexican food near <strong>Times Square</strong></div>
-                        </div>
-                        <img src={Heart} alt='' />
-                        <div>Fashion, Vintage shopping, Cocktail Culture</div>
-                    </div>
-
-                    <hr/>
-
-                    <div>
-                        <div>
-                            <img src={Jaime} alt='' />
-                            <div>Jaime G.</div>
-                            <div><strong>Jaime G.</strong> is looking for handcrafted art bear <strong>DUMBO, BK</strong></div>
-                        </div>
-                        <img src={Heart} alt='' />
-                        <div>Pottery, Vegan Cooking, Gardens</div>
-                    </div>
 
                 </div>
             );
