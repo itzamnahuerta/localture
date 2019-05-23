@@ -1,0 +1,24 @@
+@import 'Colors';
+
+.dashboard {
+    .mytrips-travelers {
+        display: flex;
+        justify-content: center;
+        #myTrips {
+            border: 1px solid black;
+            background-color: white;
+            flex: 1;
+        }
+        #travelers {
+            background-color: white;
+            border: 1px solid black;
+            flex: 1;
+        }
+
+    }
+    .trip-landscape {
+        width: 100%;
+        height: 16em;
+    }
+
+}
