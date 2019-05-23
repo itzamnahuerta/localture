@@ -11,6 +11,7 @@ import Ronan from '../../assets/Ronan.jpg'
 import Noriko from '../../assets/Noriko.jpg'
 import Jaime from '../../assets/Jamie.png'
 import Analisa from '../../assets/Analisa.png'
+import '../../styles/TravelersNear.scss'
 
 
 class TravelersNear extends Component {
@@ -20,9 +21,24 @@ class TravelersNear extends Component {
         // }
         // else{
             return (
+<<<<<<< HEAD
                 <div className="travelers-near">
                     <div className="send-recc">
                         <h4>Send Reccomendations</h4>
+=======
+                <div className="center">
+                    <div>
+                        <h2>Send Reccomendations</h2>
+                        <hr/>
+                    </div>
+                    <div>
+                        {/* <img src={All} alt=''/> */}
+                        <img src={Music} alt=''/>
+                        <img src={Food} alt=''/>
+                        <img src={Entertainment} alt=''/>
+                        <img src={Active} alt=''/>
+                    <hr/>
+>>>>>>> master
                     </div>
 
                     <div className="icon-interests" >
