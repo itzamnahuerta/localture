@@ -21,24 +21,10 @@ class TravelersNear extends Component {
         // }
         // else{
             return (
-<<<<<<< HEAD
+
                 <div className="travelers-near">
                     <div className="send-recc">
                         <h4>Send Reccomendations</h4>
-=======
-                <div className="center">
-                    <div>
-                        <h2>Send Reccomendations</h2>
-                        <hr/>
-                    </div>
-                    <div>
-                        {/* <img src={All} alt=''/> */}
-                        <img src={Music} alt=''/>
-                        <img src={Food} alt=''/>
-                        <img src={Entertainment} alt=''/>
-                        <img src={Active} alt=''/>
-                    <hr/>
->>>>>>> master
                     </div>
 
                     <div className="icon-interests" >
