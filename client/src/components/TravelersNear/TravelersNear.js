@@ -71,6 +71,66 @@ class TravelersNear extends Component {
                             <div>Cocktail Culture, Fashion, Vintage Shopping</div>
                         </div>
                     </div>
+                    <div className="user-interest-post">
+                         <div className="user-info"> 
+                            <img className="user-profile-photo" src={Ronan} alt='' />
+                            <div>Ronan</div>
+                        </div>
+                        <div  className="interest-post">
+                            <strong>Ronan</strong> 
+                            is looking for Record Shopping in the
+                            <strong>Astoria, Queens</strong>
+                        </div>
+                        <div className="love-interests"> 
+                            <img  className="heart-icon" src={Heart} alt='' />
+                            <div>Cocktail Culture, Fashion, Vintage Shopping</div>
+                        </div>
+                    </div>
+                    <div className="user-interest-post">
+                         <div className="user-info"> 
+                            <img className="user-profile-photo" src={Noriko} alt='' />
+                            <div>Noriko L.</div>
+                        </div>
+                        <div  className="interest-post">
+                            <strong>Noriko L.</strong> 
+                            is looking for a hip-hop spot in
+                            <strong>Flatiron</strong>, NYC
+                        </div>
+                        <div className="love-interests"> 
+                            <img  className="heart-icon" src={Heart} alt='' />
+                            <div>Record Shopping, Film, Southern Food</div>
+                        </div>
+                    </div>
+                    <div className="user-interest-post">
+                         <div className="user-info"> 
+                            <img className="user-profile-photo" src={Analisa} alt='' />
+                            <div>Analisa K.</div>
+                        </div>
+                        <div  className="interest-post">
+                            <strong>Analisa K.</strong> 
+                            is looking for Mexican food near
+                            <strong>Times Square</strong>
+                        </div>
+                        <div className="love-interests"> 
+                            <img  className="heart-icon" src={Heart} alt='' />
+                            <div>Fashion, Vintage Shopping, Cocktail Culture</div>
+                        </div>
+                    </div>
+                    <div className="user-interest-post">
+                         <div className="user-info"> 
+                            <img className="user-profile-photo" src={Jaime} alt='' />
+                            <div>Jaime G.</div>
+                        </div>
+                        <div  className="interest-post">
+                            <strong>Jaime G.</strong> 
+                            is looking for Handcrafted art near
+                            <strong>DUMBO, BK</strong>
+                        </div>
+                        <div className="love-interests"> 
+                            <img  className="heart-icon" src={Heart} alt='' />
+                            <div>Pottery, Vegan Cooking, Gardening</div>
+                        </div>
+                    </div>
 
 
                 </div>
