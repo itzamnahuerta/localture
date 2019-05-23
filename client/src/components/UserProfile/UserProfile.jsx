@@ -114,7 +114,7 @@ class UserProfile extends Component {
             return this.state.music.map((m, i) => {
                 console.log('mapping', m)
                 return (
-                    <div>
+                    <div className="list-items">
                         <input 
                             type='checkbox' 
                             id={m} 
@@ -188,8 +188,8 @@ class UserProfile extends Component {
         }
         if(this.props.authenticated && this.state.editInterests){
             return (
-                <div>
-                    <button onClick={this.leaveEditInterests}>Back</button>
+                <div className="interest-boxes" >
+                    <button className="back-button" onClick={this.leaveEditInterests}>Back</button>
                     <h1>{this.state.selectedInterest}</h1>
                     <ul>
                         {this.listInterests()}

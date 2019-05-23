@@ -1,5 +1,10 @@
 @import 'Colors';
 
+.back-button{
+    position:absolute;
+    margin-top: -1em;
+}
+
 .user-profile {
     .profile-container {
         display: grid;
@@ -34,4 +39,19 @@
         margin-bottom: 1em;
     }
 
+}
+
+.interest-boxes {
+    position: relative;
+    top: 5em;
+    left: 0;
+    width: 100%;
+ }
+
+ ul{
+    list-style: none;
+
+ }
+.list-items {
+    display: flex;
 }
