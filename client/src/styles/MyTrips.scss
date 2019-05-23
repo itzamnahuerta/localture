@@ -1,0 +1,118 @@
+.my-trips{
+    .recc-favs {
+        // margin-top: 0em;
+        display: flex;
+        text-align: center;
+        height: 2em;
+        #reccomendations {
+            flex:1;
+            border: 1px solid black;
+        }
+        #faves {
+            flex:1;
+            border: 1px solid black;
+        }
+    }
+    .icon-interests{
+        margin-top: 1em;
+        justify-content: center;
+        margin-left: 4em;
+        display: grid;
+        grid-template-columns: repeat(5, 5em);
+        grid-template-rows: 2em 2em;
+        img:nth-child(1) {
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        img:nth-child(2) {
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        img:nth-child(3) {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            
+        }
+        img:nth-child(4) {
+            grid-column: 4/5;
+            grid-row: 1/2;
+        }
+        
+        .icon-music-title {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            margin-top: 0.3em;
+            margin-left: 1.7em;
+        }
+        .icon-food-title {
+            grid-column: 2/3;
+            grid-row: 2/3;
+            margin-top: 0.3em;
+            margin-left: 1.7em;
+        }
+        .icon-shows-title {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            margin-top: 0.3em;
+            margin-left: 1.3em;
+        }
+        .icon-outdoor-title {
+            grid-column: 4/5;
+            grid-row: 2/3;
+            margin-top: 0.3em;
+            margin-left: .9em;
+        }
+     }
+    .user-review{
+        width: 90%;
+        height: 14em;
+        margin: 1em;
+        border: 3px solid lightgray;
+
+        display: grid;
+        grid-template-columns: 6em 7em 7em 8em;
+        grid-template-rows: 7em 7em;
+
+        .user-info {
+            grid-column: 1/2;
+
+        }
+        .user-profile-photo {
+            width: 4em;
+            height: 4em;
+            border-radius: 50%;
+            margin-top: 2em;
+            margin-left: 1em;
+        }
+        .location-info {
+            border: 2px solid black;
+            grid-column: 2/5;
+            .location-photo {
+                width: 2.3em;
+                height: 2.3em;
+            }
+        }
+
+        .location-review {
+            grid-column: 2/5;
+            grid-row: 2/3;
+        }
+        .heart-icon {
+            grid-column: 4/5;
+            grid-row: 2/3;
+            width: 1em;
+            height: 1em;
+            margin-top: 6em;
+            margin-left: 7em;
+        }
+    }
+}
+
+div.icon-interests >img {
+    width: 25px;
+    height: 25px;
+    margin-left: 1em;
+}
+div.icon-interests > p {
+    font-size: .6em;
+}
